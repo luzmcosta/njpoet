@@ -30,7 +30,7 @@
 
     <div class="copyright">
         <small>
-            <i class="fa fa-copyright"></i> Designed by <a href="luzmcosta.com">Luz M. Costa</a> with coded <i class="fa fa-heart"></i>
+            <i class="fa fa-copyright"></i> Designed by <a href="luzmcosta.com">Luz M. Costa</a> with <i class="fa fa-heart"></i>
         </small>
     </div>
 </footer>
