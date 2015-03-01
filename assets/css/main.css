@@ -1,0 +1,1190 @@
+/**
+ * [Main Stylesheet]
+ *
+ * njpoet WordPress theme's custom CSS.
+ *
+ * @author Luz M. Costa
+ * @updated 02.21.2015
+ * @version 0.0.2
+ *
+ * Notes:
+    * Developer Notes
+
+
+    * File Structure
+        Rules are divided by views and smaller objects
+        -   Document Tags
+        -   Containers + Wrappers
+        -   Titles and Content
+        -   Links and Menus
+        -   Tables
+        -   Forms
+        -   Responsive
+        -   Print
+
+    * Palette
+        Colors
+        -   Cream: CBCDC3 | rgb(203, 205, 195)
+        -   Desert: 93917B | rgb(147, 145, 123)
+        -   Dark Green: 606848 | rgb(96, 104, 72)
+        -   Bright Green: 598E1E | rgb(89, 142, 30)
+        -   Brown: 2A1A1B | rgb(42, 26, 27)
+        -   Blue: 1E5285 | rgb(30, 82, 133)
+        -   Bright Blue: 14A0E9 | rgb(20, 160, 233)
+        -   Ice Blue: F0F8FF | rgb(240, 248, 255)
+
+        Shades
+        -   White: #F5F5F5 | rgb(245, 245, 245)
+        -   Light Gray: #AFAFAF | rgb(175, 175, 175)
+        -   Midtone Gray: #4B4B4B | rgb(75, 75, 75)
+        -   Black: #292420 | rgb(41, 36, 32)
+
+        Social Colors
+        -   Facebook Blue: #3B5998 | rgb(59, 89, 152)
+        -   Twitter Blue: #14A0E9 | rgb(20, 160, 233)
+        -   Pinterest Red: #CC2127 | rgb(204, 33, 39)
+
+        User Messages
+        -   Error: #EC2512 | rgb(236, 37, 18)
+        -   Warn: #FF8000
+        -   Success: #007700
+
+    * Font
+        -   "Lato", Century Gothic, sans-serif.
+
+    * Spacing
+        -   Should use em, rem, or small|medium|large.  Avoid using px for
+            font-size and line height.
+        -   Spacing should observe a 3px breakdown when possible.
+        -   We're using rem or em to overwrite px. This is key to
+            maintaining design consistency and responsiveness across
+            browsers and screens.
+ */
+
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+/* Document Tags */
+html,
+body {
+    font-family: Lato, Century Gothic, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: rgb(41, 36, 32);
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+}
+
+::selection {
+    background: rgb(30, 82, 133); /* WebKit/Blink Browsers */
+    color: rgb(245, 245, 245);
+}
+::-moz-selection {
+    background: rgb(30, 82, 133); /* Gecko Browsers */
+    color: rgb(245, 245, 245);
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+p:not(form p) {
+    max-width: 80ch;
+}
+p,
+.form-group {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin: 3rem 2rem    p,
+        .form-group {
+            margin: 3rem auto;
+        }
+;
+    max-width: 80ch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(41, 36, 32);
+    font-family: Lato, Century Gothic, sans-serif;
+}
+h1,
+.h1 {
+    font-size: 2em;
+}
+h2,
+.h2 {
+    font-size: 1.75em;
+}
+h3,
+.h3 {
+    font-size: 1.5em;
+}
+h4,
+.h4 {
+    font-size: 1.25em;
+}
+h5,
+.h5 {
+    font-size: 1em;
+}
+h6,
+.h6 {
+    font-size: small;
+}
+a {
+    color: rgb(30, 82, 133);
+    transition: color 0.5s linear;
+}
+
+a:hover,
+a:focus {
+    color: rgb(20, 160, 233);
+    text-decoration: none;
+}
+
+address,
+cite,
+code,
+p {
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    word-break: keep-all;
+}
+figure {
+    margin: 0 auto;
+}
+figcaption:not(.gallery figcaption) {
+    color: rgb(147, 147, 152);
+    font-family: Lato, Century Gothic, sans-serif;
+    font-weight: 600;
+    margin: 0 3em;
+    text-align: center;
+}
+.gallery figcaption {
+    font-size: small;
+    text-align: right;
+}
+.size-full + figcaption {
+    margin: 0.25em 0;
+}
+caption,
+time {
+    font-size: 0.8em;
+}
+
+address,
+cite,
+code,
+ins {
+    font-family: monospace;
+    font-size: 0.8em;
+}
+
+pre {
+    color: rgb(75, 75, 75);
+    background: rgb(245, 245, 245);
+    border: none;
+    padding: 2em;
+}
+
+blockquote,
+q {
+    background: #F3F3F4;
+    border: 3px solid #F3F3F4;
+    border-radius: 3px;
+    font-size: 100%;
+    padding-left: 24px;
+}
+blockquote p {
+    margin: 0 4rem;
+    padding: 4rem 0;
+}
+
+td,
+th {
+    border: 1px solid rgb(41, 36, 32);
+    padding: 6px 9px;
+}
+
+td {
+    font-weight: 300;
+}
+
+dt {
+    font-family: Lato, Century Gothic, sans-serif;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+dd {
+    font-weight: 300;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+}
+dl {
+    padding: 1em;
+}
+
+/* Alignments */
+.alignright,
+.size-full.alignright {
+    float: right;
+    margin: 1em 0 1em 3em;
+}
+.alignleft,
+.size-full.alignleft {
+    margin: 1em 3em 1em 0;
+}
+.aligncenter,
+.size-full.aligncenter {
+    margin: 1em auto;
+}
+.alignnone,
+.size-full.alignnone {
+    margin: 3em auto;
+}
+.size-full {
+    margin: 1em 0;
+}
+
+/* Containers + Wrappers */
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.container-fluid {
+    padding: 0;
+}
+.overlay {
+    background: rgba(30,82,133,0.5);
+    height: 96%;
+    position: absolute;
+    width: 100%;
+}
+.banner > .container-fluid {
+    background: #000000 url('../img/njpoet_banner.jpg') center 0 no-repeat;
+    background-size: 50%;
+    display: -webkit-inline-box;
+    display: inline-box;
+    max-height: 250px;
+    width: 100%;
+}
+.row {
+    margin: 0;
+}
+.social-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    display: none;
+    height: 100%;
+    margin-top: 7rem;
+    position: absolute;
+    width: 100%;
+}
+.twitter {
+    background: #1E5285;
+    padding: 3rem;
+    position: relative;
+    text-align: center;
+}
+.header-navbar {
+    padding: 1rem 0;
+}
+nav.collapse {
+    border: none;
+    display: block;
+}
+.contact {
+    margin: 2em 0 3em 0;
+}
+.sharedaddy.sd-sharing-enabled {
+    display: none;
+    margin: 1rem 1rem 1rem 4rem;
+    position: absolute;
+}
+.fa-share {
+    color: #14A0E9;
+    margin: 2rem 0;
+}
+.social,
+.share {
+    clear: both;
+    float: left;
+}
+.share-count:not(span) {
+    font-family: Lato, Century Gothic, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+.share-count span {
+    font-size: small;
+}
+.share-post {
+    text-align: center;
+}
+.share-post span {
+    border-radius: 1rem;
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    width: 14rem;
+    z-index: 1;
+}
+.share-post .like_page {
+    background: rgb(59, 89, 152);
+    cursor: pointer;
+}
+.share-post h3 {
+    margin: 6rem 3rem 2rem 0;
+}
+.share-post .or {
+    background: white;
+    border-radius: 2rem;
+    color: rgb(75, 75, 75);
+    height: 4rem;
+    left: -50%;
+    line-height: 2rem;
+    padding: 0.75rem 0.75rem;
+    position: relative;
+    top: 2rem;
+    vertical-align: middle;
+    width: 4rem;
+    z-index: 2;
+}
+.share-post .tweet_page {
+    background: rgb(20, 160, 233);
+    cursor: pointer;
+    left: -2rem;
+    position: relative;
+    z-index: 1;
+}
+.share-post .like_page:hover,
+.share-post .tweet_page:hover {
+    color: white;
+}
+.share-post .like_page:hover {
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+}
+.share-post .tweet_page:hover {
+    box-shadow: -3px 3px rgba(0, 0, 0, 0.15);
+}
+.menu-icon {
+    color: #FFFFFF;
+    margin: 1rem 0;
+    position: absolute;
+    right: 30px;
+    transition: color 1s linear;
+    z-index: 100;
+}
+.menu-icon a {
+    color: #FFFFFF;
+}
+.menu-icon a:hover,
+.menu-icon i:hover {
+    color: rgb(30, 82, 133);
+    color: #14A0E9;
+}
+.menu-icon i {
+    margin: 1rem;
+}
+.social-navbar img {
+    max-height: 32px;
+}
+.social-navbar h2 {
+    color: rgb(30, 82, 133);
+    display: inline;
+    font-size: 1.5rem;
+    margin: 1rem 2rem 0 1rem;
+}
+.social h2 {
+    padding-left: 1rem;
+}
+.social-navbar .textwidget > div {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.social-navbar a {
+    color: rgb(41, 36, 32);
+    display: block;
+    font-size: 1.5rem;
+    padding-right: 4rem;
+}
+.social-navbar a:hover {
+    color: rgb(30, 82, 133);
+}
+.social-navbar a:not(:last-child) {
+    border-right: 1px solid gray;
+}
+.social-navbar img {
+    margin-right: 1rem;
+}
+.share section {
+    padding-left: 1rem;
+}
+.social section {
+    border-right: 1px solid #F5F5F5;
+    margin-right: 1rem;
+}
+.social span {
+    clear: both;
+    color: rgb(30, 82, 133);
+    display: block;
+    font-family: Lato, Century Gothic, sans-serif;
+    margin: 0 1rem;
+}
+.social .widget_search {
+    margin: 2rem;
+}
+.social-navbar > div {
+    top: 5em;
+    position: relative;
+}
+.input-group {
+    width: 100%
+}
+.social-navbar .search {
+    margin: 0 3rem 3rem 2rem;
+}
+.search button {
+    height: 100%;
+}
+.search label {
+    display: none;
+}
+.search-field {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #F0F8FF;
+    border: 1px solid #1E5285;
+    border-radius: 1rem !important;
+}
+.search-field:focus {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.15);
+}
+.like,
+.retweet {
+    cursor: pointer;
+    display: inline-block;
+}
+.like:hover,
+.retweet:hover {
+    color: rgb(30, 82, 133);
+}
+
+.header-brand {
+    position: relative;
+}
+.header-brand a {
+    color: #FFFFFF;
+    font-size: 3rem;
+}
+.header-brand div {
+    margin: 1rem 3rem;
+    width: 100%;
+}
+.header-brand img {
+    max-height: 60px;
+}
+.floor {
+    border-bottom: 3px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    display: none;
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    /* Override Bootstrap rules before setting new ones. */
+    margin-bottom: 0;
+    position: relative;
+    z-index: 0;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    margin: auto;
+    width: 100%;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background: none;
+}
+
+.navbar-nav {
+    float: none;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float: none;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0.75em 1em;
+    max-width: 7em;
+    min-width: 4em;
+}
+
+.navbar-nav > li > a {
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a,
+h2 a {
+    color: rgb(41, 36, 32);
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+h2 a:focus,
+h2 a:hover {
+    color: rgb(30, 82, 133);
+    text-decoration: none;
+}
+
+/* Main Header Menu */
+.active a,
+.home .menu-latest a {
+    color: rgb(30, 82, 133) !important;
+}
+
+/* Media */
+.page-template-archives-php .thumbnail-wrapper {
+    margin-left: 3px;
+}
+.img-thumbnail {
+    border: none;
+}
+.nivo-lightbox-overlay {
+    background: rgba(0, 0, 0, 0.75);
+}
+.nivo-lightbox-close {
+    color: rgb(255,255,255);
+}
+#prodcontain {
+    text-align: center;
+}
+
+/* Title and Content */
+main {
+    font-size: 1.3em;
+    margin: auto;
+    max-width: 1600px;
+}
+
+header {
+    margin: 0 0 2em 0;
+}
+.single article header {
+/*  background: #f3f3f4; float: left; margin: 0 4rem 4rem 0; padding: 4rem; */
+    font-size: 2.25rem;
+    margin: 0 auto 5rem auto;
+    text-align: center;
+    width: 80ch;
+}
+
+.gutter {
+    width: 3rem;
+}
+.home article,
+.search article,
+.page .entry-content:not(.contact),
+nav {
+    border-bottom: 1px solid #F3F3F4;
+    width: 36rem;
+}
+.search article {
+    width: 36rem;
+}
+.single .entry-content {
+    margin: 2rem 4rem 0 4rem;
+}
+.page h2.rgb(30, 82, 133)le {
+    margin: 1em 0;
+}
+.page .entry-content h2 {
+    margin: 2rem 1rem;
+}
+.home h2.entry-title,
+.search h2.entry-title,
+.page h2.entry-title {
+    font-size: 2rem;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.home article img,
+.search article img,
+.page .entry-content img {
+    margin: 6px 0;
+    max-height: 250px;
+    text-align: center;
+}
+.entry-content.most-popular-posts {
+    text-align: center;
+}
+.home .entry-summary p,
+.search .entry-summary p {
+    font-size: small;
+    margin: 1rem 0;
+}
+.gallery ul {
+    padding: 0;
+    text-align: center;
+}
+.gallery li {
+    list-style-type: none;
+    margin: 4rem auto;
+}
+.gallery li div {
+    margin: auto;
+    max-width: 640px;
+}
+
+.alert-warning {
+    background: #FFFFFF;
+    border: 1px solid #FF8000;
+    color: #FF8000;
+}
+.error404 form.search-form {
+    margin-bottom: 3em;
+}
+.error404 .form-control {
+    height: 36px;
+}
+
+.contact h1 {
+    margin: 1em;
+    text-align: center;
+}
+.contact form {
+    margin: 3rem;
+}
+
+p.MsoNormal {
+    text-align: center;
+}
+
+
+/* Links and Menus */
+.pager {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2rem 0;
+}
+.pager .previous > a,
+.pager .previous > span,
+.pager .next > a,
+.pager .next > span {
+    float: none;
+}
+.pager li {
+    display: inline-flex;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    background-color: transparent;
+    color: rgb(30, 82, 133);
+}
+.pager li > a,
+.pager li > span {
+    background-position: 12px 21px;
+    background-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: rgb(41, 36, 32);
+    line-height: 1;
+    padding: 2rem;
+}
+.previous span,
+.next span {
+    padding-left: 9px;
+}
+.previous a {
+    background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-left.png') no-repeat left top;
+}
+.next a {
+    background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-right.png') no-repeat right top;
+}
+section#comments {
+    background: #F3F3F4;
+    clear: both;
+    margin: 6rem 0;
+}
+section#comments nav {
+    margin: 1rem;
+}
+section#comments h3,
+section#respond h3 {
+    background: #rgb(30, 82, 133);
+    font-weight: 600;
+    font-size: 3rem;
+    padding: 3rem 0 0 0;
+}
+.respond {
+    color: #FFFFFF;
+    display: block;
+    font-family: Lato, Century Gothic, sans-serif;
+    font-size: small;
+}
+.respond:hover {
+    color: #FFFFFF;
+    font-style: italic;
+}
+p.logged-in {
+    font-size: 1.5rem;
+}
+.comment .form-control {
+    font-size: 100%;
+}
+.comment-subscription-form label {
+    font-weight: 300;
+    margin: 1rem;
+}
+.media-list > li {
+    background: #FFF;
+    margin: 1rem;
+    padding: 3rem;
+}
+li.comment.depth-3 > .comment-meta,
+li.comment.depth-4 > .comment-meta,
+li.comment.depth-5 > .comment-meta {
+    width: 100%;
+}
+li.comment.depth-3 > .media-body,
+li.comment.depth-4 > .media-body,
+li.comment.depth-5 > .media-body {
+    clear: left;
+}
+li.comment p {
+    margin: 0 auto 2rem 2rem;
+}
+li.comment li {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin: 2rem;
+    padding: 1rem;
+}
+li.comment.bypostauthor > .comment-meta .media-heading {
+    color: red;
+}
+.media-body {
+    clear: left;
+    margin: 0;
+}
+.comment-meta {
+    display: inline-block;
+    float: left;
+    margin-bottom: 2rem;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+.comment-meta > * {
+    clear: both;
+    font-size: small;
+    text-align: center;
+    width: 100%;
+}
+.comment-meta img {
+    border-radius: 4px;
+    float: none !important;
+    margin: auto;
+    width: auto;
+}
+.comment-meta a {
+    color: rgb(0, 0, 0);
+}
+.comment-meta a:hover {
+    color: rgb(30, 82, 133);
+    text-decoration: none;
+}
+.comment-meta .media-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1em 0;
+}
+.comment-actions a:nth-child(2) {
+    border-left: 1px solid #F5F5F5;
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+}
+section#respond {
+    background: #F3F3F4;
+    border-radius: 1rem;
+    margin: 3em 0;
+    text-align: center;
+}
+section#respond .form-group,
+section#respond p {
+    margin: 3rem;
+    max-width: 100%;
+}
+form#commentform {
+    padding-bottom: 1rem;
+}
+div#jp-relatedposts {
+    clear: both;
+}
+div#jp-relatedposts h3.jp-relatedposts-headline {
+    font-size: 1em;
+}
+
+footer {
+    background: rgb(30, 82, 133);
+    color: #F0F8FF;
+    margin-top: 6rem;
+    text-align: center;
+}
+footer .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+footer section {
+    flex-basis: 1;
+    flex-grow: 1;
+    margin: 2rem;
+    min-width: 250px;
+    max-width: 400px;
+}
+footer section h3 {
+    font-weight: 600;
+    margin: 0;
+}
+
+footer .jetpack_subscription_widget {
+    background: rgb(0, 0, 0);
+    color: white;
+    float: none;
+    margin: 0 0 2em 0;
+    padding: 2em;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+}
+footer .jetpack_subscription_widget h3 {
+    height: 0;
+    margin: 0;
+}
+footer .jetpack_subscription_widget p {
+    display: inline-block;
+    margin: 0;
+}
+footer ul {
+    padding: 0;
+}
+footer li {
+    display: inline;
+    list-style: none;
+    margin: 1rem;
+    padding: 1rem;
+}
+footer a {
+    color: #F0F8FF;
+}
+footer input[type=submit] {
+    border: 3px solid rgb(30, 82, 133);
+    border-radius: 0.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    height: 4rem;
+    margin-top: 1rem;
+}
+footer input[type=submit]:hover {
+    background: none;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(30, 82, 133);
+}
+footer #subscribe-text {
+    font-family: Lato, Century Gothic, sans-serif;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+footer #subscribe-email {
+    max-width: 98%;
+    width: 100%;
+}
+footer #subscribe-field {
+    background: none;
+    border: none;
+    border-bottom: 3px solid white;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 2rem;
+    height: 4rem;
+    padding: 0 1em;
+    text-align: center;
+    width: 25ch;
+}
+footer .jetpack_subscription_widget i {
+    margin-right: 0.5em;
+}
+footer .widget_twitter_timeline h3 {
+    background: url(../img/theuglyvolvo_twitter.png) 0 0 no-repeat;
+    background-size: 50px;
+    font-size: 2rem;
+    line-height: 3;
+    margin-top: 0;
+    padding-left: 60px;
+}
+footer .widget_text a {
+    color: rgb(41, 36, 32);
+    float: left;
+    font-weight: 300;
+}
+footer .widget_text a:hover {
+    color: rgb(30, 82, 133);
+}
+footer .nav-menu {
+    padding: 2rem 0;
+}
+footer .follow {
+    font-size: 4rem;
+    padding: 4rem 0 2rem 0;
+}
+.like_page,
+.tweet_page {
+    color: rgb(41, 36, 32);
+}
+.share-page > *:not(.share-count) {
+    margin: 2rem 1rem;
+}
+.like_page:hover {
+    color: rgb(59, 89, 152);
+}
+.tweet_page:hover {
+    color: rgb(20, 160, 233);
+}
+.twitter-follow {
+    float: right;
+    margin: 1.5rem 1rem;
+}
+.twitter-follow button {
+    height: 3rem;
+    width: 8rem;
+}
+footer .widget_facebook-like-box {
+    border: 1px solid #e5e6e9;
+    padding: 2rem 24px;
+}
+#like_site,
+#like_site > span {
+    float: right;
+    width: 48px;
+}
+li.feed-item {
+    list-style: none;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+li.feed-item:first-child {
+    margin-top: 2rem;
+}
+.rss-aggregator {
+    clear: both;
+    margin: 1.35rem 0;
+    padding: 0;
+}
+.rss-aggregator + .nav-links {
+    height: 0;
+    margin: 0;
+}
+span.feed-date {
+    display: none;
+}
+
+.copyright small {
+    display: block;
+    padding: 3rem 1rem;
+}
+.fa-copyright {
+    margin-right: 0.5rem;
+}
+footer .fa-heart {
+    margin-left: 0.5rem;
+}
+
+/* Table */
+
+
+/* Form */
+.btn-primary,
+.btn-default,
+button,
+input[type="submit"] {
+    background: rgb(30, 82, 133);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600 !important;
+    height: 4em;
+    text-align: center;
+    transition: background-color 0.15s linear;
+    padding: 0 1em;
+    width: 100%;
+}
+.btn-primary:hover,
+.btn-default:hover,
+button:hover,
+input[type="submit"]:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-default:focus,
+.btn-default:active,
+button:focus,
+button:active,
+input[type="submit"]:focus ,
+input[type="submit"]:active {
+    color: #FFFFFF;
+    border: 3px solid rgb(30, 82, 133);
+}
+label,
+input {
+    font-size: smaller;
+    font-weight: 300;
+    outline: none;
+}
+textarea,
+input[type="email"],
+input[type="text"] {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    outline: none;
+    padding: 6px 12px;
+    width: 100% !important;
+}
+textarea:focus,
+input[type="email"]:focus,
+input[type="text"]:focus {
+    color: rgb(0, 0, 0);
+}
+
+.contact-form {
+    margin-bottom: 5rem;
+}
+.contact-form label {
+    font-weight: 400 !important;
+}
+.contact-form textarea {
+    width: 100% !important;
+}
+.contact-form input {
+    font-weight: 300 !important;
+}
+.contact-form input[type="submit"] {
+    font-size: 2rem;
+    height: 5rem;
+}
+.contact-form input[type="email"] {
+    max-width: 100%;
+}
+.contact-form div:not(:nth-child(3)) {
+    float: left;
+    width: 50%;
+}
+.contact-form div:nth-child(3) {
+    clear: both;
+}
+.contact-form span {
+    font-size: 0.8em;
+}
+
+/* Removes WordPress smiley face. */
+#wpstats,
+#wpadminbar {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar-nav > li {
+        margin: 12px 18px;
+    }
+    .social-navbar .textwidget > div {
+        display: block;
+    }
+    .social-navbar > div {
+        top: 1em;
+    }
+}
+@media (min-width: 400px) {
+    .share-post .or {
+        left: -2rem;
+        top: 0;
+    }
+    .share-post .tweet_page {
+        left: -4rem;
+    }
+    footer section {
+        margin: 24px auto;
+    }
+}
+@media (min-width: 600px) {
+    li.comment li {
+        padding: 3rem;
+    }
+    .media-body {
+        clear: none;
+        margin: 0 3rem;
+    }
+    .comment-meta {
+        width: 14rem;
+    }
+    .row {
+        margin: 0;
+        padding: 4rem;
+    }
+    p,
+    .form-group {
+        margin: 3rem auto;
+    }
+    .contact form {
+        margin: 3rem 5rem;
+    }
+}
+@media (min-width: 675px) {
+    .social-navbar > div {
+        top: 0.5rem;
+    }
+    .social section {
+        border-right: 1px solid #F5F5F5;
+        margin-right: 1rem;
+    }
+}
+@media (min-width: 960px) {
+    .navbar-default .navbar-nav > li > a,
+    h2 a {
+        margin-left: 0;
+    }
+    .banner > .container-fluid {
+        height: 350px;
+        max-height: 350px;
+    }
+}
+@media (min-width: 1000px) {
+    .social,
+    .share {
+        clear: none;
+        display: inline-block;
+        float: none;
+    }
+}
+
+/* Print */
+@media print {}
