@@ -23,7 +23,7 @@ function roots_scripts() {
       'b_css'     => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
       'b_js'      => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
       'icons'     => '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
-      'animate'   => '/assets/css/animate.css',
+      // 'animate'   => '/assets/css/animate.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'masonry'   => '/assets/js/masonry.pkgd.min.js',
@@ -36,7 +36,7 @@ function roots_scripts() {
 
   wp_enqueue_style('b_css', $assets['b_css'], false, null);
   wp_enqueue_style('icons', $assets['icons'], false, null);
-  wp_enqueue_style('animate', get_template_directory_uri() . $assets['animate'], false, null);
+  // wp_enqueue_style('animate', get_template_directory_uri() . $assets['animate'], false, null);
   wp_enqueue_style('nivocss', get_template_directory_uri() . $assets['nivocss'], false, null);
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
