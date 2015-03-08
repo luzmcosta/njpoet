@@ -304,13 +304,22 @@ nav.collapse {
     margin: 2em 0 3em 0;
 }
 .sharedaddy.sd-sharing-enabled {
+    background: rgba(255, 255, 255, 0.9);
     display: none;
-    margin: 1rem 1rem 1rem 4rem;
+    height: 21rem;
+    left: 0;
+    margin: 0;
+    padding: 25% 4rem;
     position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
 }
 .fa-share {
+    color: #428bca;
+}
+.fa-share:hover {
     color: #14A0E9;
-    margin: 2rem 0;
 }
 .social,
 .share {
@@ -546,13 +555,13 @@ nav.collapse {
 
 .navbar-default .navbar-nav > li > a,
 h2 a {
-    color: rgb(41, 36, 32);
+    color: #1E5285;
 }
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover,
 h2 a:focus,
 h2 a:hover {
-    color: rgb(30, 82, 133);
+    color: #428bca;
     text-decoration: none;
 }
 
@@ -583,11 +592,10 @@ h2 a:hover {
 main {
     font-size: 1.3em;
     margin: auto;
-    max-width: 1600px;
 }
 
 header {
-    margin: 0 0 2em 0;
+    margin: 0 0 2rem 0;
 }
 .single article header {
 /*  background: #f3f3f4; float: left; margin: 0 4rem 4rem 0; padding: 4rem; */
@@ -605,6 +613,8 @@ header {
 .page .entry-content:not(.contact),
 nav {
     border-bottom: 1px solid #F3F3F4;
+    height: 21rem;
+    padding: 2rem;
     width: 36rem;
 }
 .search article {
@@ -623,7 +633,7 @@ nav {
 .search h2.entry-title,
 .page h2.entry-title {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
     vertical-align: middle;
 }
 
@@ -641,6 +651,21 @@ nav {
 .search .entry-summary p {
     font-size: small;
     margin: 1rem 0;
+}
+.excerpt_prompt {
+    bottom: 0;
+    display: flex;
+    font-size: small;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    width: 32rem;
+}
+.excerpt_prompt > * {
+    margin: 1rem 0;
+}
+a.read-more {
+    line-height: 100%;
 }
 .gallery ul {
     padding: 0;
@@ -709,7 +734,7 @@ p.MsoNormal {
     border-radius: 4px;
     color: rgb(41, 36, 32);
     line-height: 1;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 .previous span,
 .next span {

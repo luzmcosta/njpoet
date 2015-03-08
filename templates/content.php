@@ -4,10 +4,8 @@
     <?php // get_template_part('templates/entry-meta'); ?>
   </header>
   <div class="entry-summary">
-    <?php get_main_image($post_id); ?>
-
     <?php the_excerpt(); ?>
 
-    <i class="fa fa-share"></i>
+    <?php echo excerpt_prompt( get_permalink() ); ?>
   </div>
 </article>

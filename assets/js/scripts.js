@@ -63,9 +63,11 @@
     Menu.share = function() {
         $( ".fa-share" ).on( "click", function() {
             var shareMenu = $( this )
-                .siblings( ".sharedaddy.sd-sharing-enabled" );
+                    .parent( ".excerpt_prompt" )
+                    .siblings( ".sharedaddy.sd-sharing-enabled" ),
+                speed = $( shareMenu ).is( ":visible" ) ? 50 : 300;
 
-            shareMenu.toggle( "slideDown" );
+            shareMenu.slideToggle( speed );
         });
     };
 
