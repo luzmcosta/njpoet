@@ -19,6 +19,39 @@ function roots_wp_title($title) {
 add_filter('wp_title', 'roots_wp_title', 10);
 
 /**
+ * Sets post-excerpt prompt to continue reading.
+ */
+function excerpt_prompt( $permalink ) {
+    // Open the container element.
+	$excerpt_prompt = '<div class="excerpt_prompt">';
+
+	// Set the "Continue Reading" link.
+	$excerpt_prompt .= '<a class="read-more" href="' . $permalink .
+	    '">Continue reading</a>';
+
+    // Set the share prompt.
+	$excerpt_prompt .= '<i class="fa fa-share fa-fw"></i>';
+
+    // Close the container element.
+    $excerpt_prompt .= '</div>';
+
+    return $excerpt_prompt;
+}
+
+function excerpt_end() {
+    return '...';
+}
+add_filter('excerpt_more', 'excerpt_end');
+
+/**
+ * Sets length of excerpts.
+ */
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/**
  * Returns a random item from the given array.
  */
 function random($defaults) {
