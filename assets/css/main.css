@@ -760,12 +760,6 @@ p.MsoNormal {
 .next span {
     padding-left: 9px;
 }
-.previous a {
-    background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-left.png') no-repeat left top;
-}
-.next a {
-    background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-right.png') no-repeat right top;
-}
 section#comments {
     background: #F3F3F4;
     clear: both;
@@ -989,14 +983,6 @@ footer #subscribe-field {
 }
 footer .jetpack_subscription_widget i {
     margin-right: 0.5em;
-}
-footer .widget_twitter_timeline h3 {
-    background: url(../img/theuglyvolvo_twitter.png) 0 0 no-repeat;
-    background-size: 50px;
-    font-size: 2rem;
-    line-height: 3;
-    margin-top: 0;
-    padding-left: 60px;
 }
 footer .widget_text a {
     color: rgb(41, 36, 32);
