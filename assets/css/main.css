@@ -189,27 +189,37 @@ ins {
 
 pre {
     color: rgb(75, 75, 75);
-    background: rgb(245, 245, 245);
+    background: #F6F6F6;
     border: none;
     padding: 2em;
+    margin: auto;
+    max-width: 150ch;
 }
 
 blockquote,
 q {
-    background: #F3F3F4;
-    border: 3px solid #F3F3F4;
+    background: #F6F6F6;
+    border: 3px solid #F6F6F6;
     border-radius: 3px;
     font-size: 100%;
-    padding-left: 24px;
+    margin: auto;
+    max-width: 80ch;
 }
 blockquote p {
     margin: 0 4rem;
     padding: 4rem 0;
 }
-
+table {
+    margin: 4rem auto;
+}
+thead th {
+    background: #14A0E9 !important;
+    color: #FFF;
+}
 td,
 th {
-    border: 1px solid rgb(41, 36, 32);
+    border: 1px solid #F6F6F6;
+    font-weight: 400;
     padding: 6px 9px;
 }
 
@@ -228,7 +238,15 @@ dd {
     padding-bottom: 0.5em;
 }
 dl {
-    padding: 1em;
+    padding: 1em 0;
+    max-width: 80ch;
+}
+ul,
+ol {
+    max-width: 80ch;
+}
+ul {
+    list-style-type: disc;
 }
 
 /* Alignments */
@@ -593,7 +611,9 @@ main {
     font-size: 1.3em;
     margin: auto;
 }
-
+.single main {
+    max-width: 90ch;
+}
 header {
     margin: 0 0 2rem 0;
 }
@@ -864,10 +884,19 @@ form#commentform {
     padding-bottom: 1rem;
 }
 div#jp-relatedposts {
+    border-bottom: 1px solid #F6F6F6;
+    border-top: 1px solid #F6F6F6;
     clear: both;
+    padding-bottom: 2rem;
 }
 div#jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 1em;
+}
+div#jp-relatedposts h3.jp-relatedposts-headline em:before {
+    border: none !important;
+}
+div#jp-relatedposts h3.jp-relatedposts-headline {
+    font-size: 2rem;
 }
 
 footer {
@@ -912,6 +941,7 @@ footer .jetpack_subscription_widget p {
     margin: 0;
 }
 footer ul {
+    margin: auto;
     padding: 0;
 }
 footer li {
