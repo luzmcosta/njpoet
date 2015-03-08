@@ -16,10 +16,6 @@
         </ul>
     </div>
 
-    <div class="container">
-        <?php dynamic_sidebar('sidebar-footer'); ?>
-    </div>
-
     <div class="nav-menu">
         <ul>
             <li><a href="/">Home</a></li>
