@@ -282,7 +282,7 @@ ul {
 }
 .overlay {
     background: rgba(30,82,133,0.5);
-    height: 96%;
+    height: 100%;
     position: absolute;
     width: 100%;
 }
@@ -307,7 +307,7 @@ ul {
 }
 .twitter {
     background: #1E5285;
-    padding: 3rem;
+    padding: 0.5rem;
     position: relative;
     text-align: center;
 }

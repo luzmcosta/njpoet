@@ -24,8 +24,4 @@
             <i class="fa fa-search fa-2x"></i>
         </div>
     </div>
-
-    <div class="twitter">
-        <?php dynamic_sidebar('sidebar-twitter'); ?>
-    </div>
 </header>
