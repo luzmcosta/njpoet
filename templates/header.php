@@ -10,8 +10,7 @@
 
         <div class="header-brand">
             <div>
-                <a href="<?php echo esc_url(home_url('/')); ?>"
-                    target="_blank">#njpoet</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>">#njpoet</a>
             </div>
         </div>
 
