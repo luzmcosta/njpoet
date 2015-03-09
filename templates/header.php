@@ -10,15 +10,16 @@
 
         <div class="header-brand">
             <div>
-                <a href="<?php echo esc_url(home_url('/')); ?>">#njpoet</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>"
+                    target="_blank">#njpoet</a>
             </div>
         </div>
 
         <div class="menu-icon">
-            <a href="//twitter.com/charlesbivona">
+            <a href="//twitter.com/charlesbivona" target="_blank">
                 <i class="fa fa-twitter fa-2x"></i>
             </a>
-            <a href="//facebook.com/charlesbivona">
+            <a href="//facebook.com/charlesbivona" target="_blank">
                 <i class="fa fa-facebook fa-2x"></i>
             </a>
             <i class="fa fa-search fa-2x"></i>
