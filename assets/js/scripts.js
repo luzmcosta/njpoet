@@ -225,7 +225,7 @@
             $title = encodeURIComponent( title ),
             parameters = {
                 text: $title,
-                via: "njpoet",
+                via: "charlesbivona",
                 related: "luzmcosta",
                 url: window.location.href
             },
