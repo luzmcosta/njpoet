@@ -109,7 +109,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: rgb(41, 36, 32);
+    color: #1E5285;
     font-family: Lato, Century Gothic, sans-serif;
 }
 h1,
@@ -248,6 +248,10 @@ ol {
 ul {
     list-style-type: disc;
 }
+li {
+    font-weight: 300;
+    line-height: 3rem;
+}
 
 /* Alignments */
 .alignright,
@@ -291,6 +295,7 @@ ul {
     background-size: 50%;
     display: -webkit-inline-box;
     display: inline-box;
+    min-height: 60px;
     max-height: 250px;
     width: 100%;
 }
@@ -345,10 +350,12 @@ nav.collapse {
     float: left;
 }
 .share-count:not(span) {
+    border-top: 1px solid #F6F6F6;
+    color: #1E5285;
     font-family: Lato, Century Gothic, sans-serif;
     font-size: 2rem;
     font-weight: 600;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 .share-count span {
     font-size: small;
@@ -618,13 +625,19 @@ header {
     margin: 0 0 2rem 0;
 }
 .single article header {
-/*  background: #f3f3f4; float: left; margin: 0 4rem 4rem 0; padding: 4rem; */
-    font-size: 2.25rem;
-    margin: 0 auto 5rem auto;
-    text-align: center;
-    width: 80ch;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 2rem;
+    font-size: 2rem;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 4rem;
+    margin: 0 4rem 4rem 0;
 }
-
+h1.entry-title {
+    font-size: 3rem;
+    margin: 0;
+}
 .gutter {
     width: 3rem;
 }
@@ -636,6 +649,9 @@ nav {
     height: 21rem;
     padding: 2rem;
     width: 36rem;
+}
+nav.post-nav {
+    height: 10rem !important;
 }
 .search article {
     width: 36rem;
@@ -674,8 +690,10 @@ nav {
 }
 .excerpt_prompt {
     bottom: 0;
+    display: -webkit-flex;
     display: flex;
     font-size: small;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     margin-bottom: 1.5rem;
     position: absolute;
@@ -727,7 +745,9 @@ p.MsoNormal {
 
 /* Links and Menus */
 .pager {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     margin: 0;
     padding: 2rem 0;
@@ -736,15 +756,16 @@ p.MsoNormal {
 .pager .previous > span,
 .pager .next > a,
 .pager .next > span {
+    color: #1E5285;
     float: none;
+    font-weight: 400;
 }
 .pager li {
     display: inline-flex;
 }
 .pager li > a:hover,
 .pager li > a:focus {
-    background-color: transparent;
-    color: rgb(30, 82, 133);
+    color: #14A0E9;
 }
 .pager li > a,
 .pager li > span {
@@ -883,14 +904,11 @@ div#jp-relatedposts {
     clear: both;
     padding-bottom: 2rem;
 }
-div#jp-relatedposts h3.jp-relatedposts-headline {
-    font-size: 1em;
-}
 div#jp-relatedposts h3.jp-relatedposts-headline em:before {
     border: none !important;
 }
 div#jp-relatedposts h3.jp-relatedposts-headline {
-    font-size: 2rem;
+    font-size: 2rem !important;
 }
 
 footer {
@@ -900,8 +918,10 @@ footer {
     text-align: center;
 }
 footer .container {
+    display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
 }
 footer section {
@@ -1001,14 +1021,16 @@ footer .follow {
 }
 .like_page,
 .tweet_page {
-    color: rgb(41, 36, 32);
+    color: #1E5285;
+}
+.entry-title,
+.share-page {
+    text-align: left;
 }
 .share-page > *:not(.share-count) {
-    margin: 2rem 1rem;
+    margin: 1rem;
 }
-.like_page:hover {
-    color: rgb(59, 89, 152);
-}
+.like_page:hover,
 .tweet_page:hover {
     color: rgb(20, 160, 233);
 }
