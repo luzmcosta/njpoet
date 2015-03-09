@@ -249,7 +249,7 @@
             $title = encodeURIComponent( title ),
             parameters = {
                 text: $title,
-                via: "njpoet",
+                via: "charlesbivona",
                 related: "luzmcosta",
                 url: "njpoet.com"
             },
@@ -269,7 +269,7 @@
     Share.twitter.follow = function() {
         var button = document.createElement( "button" ),
             link = document.createElement( "a" ),
-            url = "https://twitter.com/intent/follow?screen_name=njpoet";
+            url = "https://twitter.com/intent/follow?screen_name=charlesbivona";
 
         // Set link on a tag.
         link.setAttribute( "href", url );
