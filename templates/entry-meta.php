@@ -6,8 +6,10 @@
         <i class="fa fa-twitter"></i>
     </a>
 
+<!--
     <div class="share-count">
-        <?php echo share_count(get_permalink()); ?>
+        <?php // echo share_count(get_permalink()); ?>
         <span>Shares</span>
     </div>
+-->
 </div>
