@@ -100,10 +100,9 @@
 
     /**
      * Loads Facebook's JavaScript SDK.
-     */
     window.fbAsyncInit = function() {
         FB.init({
-            appId: "613451838756750",
+            appId: "130913443173",
             cookie: true,
             status: true,
             xfbml: true,
@@ -118,6 +117,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+     */
 
     // Set Share object.
     var Share = { facebook: {}, twitter: {} };
