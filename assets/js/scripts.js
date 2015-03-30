@@ -100,7 +100,6 @@
 
     /**
      * Loads Facebook's JavaScript SDK.
-     */
     window.fbAsyncInit = function() {
         FB.init({
             appId: "130913443173",
@@ -118,6 +117,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+     */
 
     // Set Share object.
     var Share = { facebook: {}, twitter: {} };
@@ -225,7 +225,7 @@
             $title = encodeURIComponent( title ),
             parameters = {
                 text: $title,
-                via: "njpoet",
+                via: "charlesbivona",
                 related: "luzmcosta",
                 url: window.location.href
             },
@@ -249,7 +249,7 @@
             $title = encodeURIComponent( title ),
             parameters = {
                 text: $title,
-                via: "njpoet",
+                via: "charlesbivona",
                 related: "luzmcosta",
                 url: "njpoet.com"
             },
@@ -269,7 +269,7 @@
     Share.twitter.follow = function() {
         var button = document.createElement( "button" ),
             link = document.createElement( "a" ),
-            url = "https://twitter.com/intent/follow?screen_name=njpoet";
+            url = "https://twitter.com/intent/follow?screen_name=charlesbivona";
 
         // Set link on a tag.
         link.setAttribute( "href", url );

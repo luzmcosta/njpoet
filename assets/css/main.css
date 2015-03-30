@@ -94,13 +94,9 @@ p:not(form p) {
 }
 p,
 .form-group {
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 300;
-    margin: 3rem 2rem    p,
-        .form-group {
-            margin: 3rem auto;
-        }
-;
+    margin: 3rem 2rem;
     max-width: 80ch;
 }
 h1,
@@ -140,7 +136,6 @@ a {
     color: rgb(30, 82, 133);
     transition: color 0.5s linear;
 }
-
 a:hover,
 a:focus {
     color: rgb(20, 160, 233);
@@ -399,7 +394,7 @@ nav.collapse {
     width: 4rem;
     z-index: 2;
 }
-.share-post .tweet_page {
+.share-post .tweet_pages {
     background: rgb(20, 160, 233);
     cursor: pointer;
     left: -2rem;
@@ -407,13 +402,13 @@ nav.collapse {
     z-index: 1;
 }
 .share-post .like_page:hover,
-.share-post .tweet_page:hover {
+.share-post .tweet_pages:hover {
     color: white;
 }
 .share-post .like_page:hover {
     box-shadow: 3px 3px rgba(0, 0, 0, 0.15);
 }
-.share-post .tweet_page:hover {
+.share-post .tweet_pages:hover {
     box-shadow: -3px 3px rgba(0, 0, 0, 0.15);
 }
 .menu-icon {
@@ -547,11 +542,11 @@ nav.collapse {
 }
 
 .navbar-default {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
     /* Override Bootstrap rules before setting new ones. */
-    margin-bottom: 0;
-    position: relative;
-    z-index: 0;
+    margin-bottom: 0 !important;
+    position: relative !important;
+    z-index: 0 !important;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -642,7 +637,7 @@ header {
 }
 h1.entry-title {
     font-size: 3rem;
-    margin: 0;
+    margin: 0 2rem 0 0;
 }
 .gutter {
     width: 3rem;
@@ -652,6 +647,7 @@ h1.entry-title {
 .page .entry-content:not(.contact),
 nav {
     border-bottom: 1px solid #F3F3F4;
+    min-height: 21rem;
     height: 21rem;
     padding: 2rem;
     width: 36rem;
@@ -665,6 +661,7 @@ nav.post-nav {
 .single .entry-content {
     margin: 2rem 4rem 0 4rem;
 }
+
 .page h2.rgb(30, 82, 133)le {
     margin: 1em 0;
 }
@@ -750,6 +747,11 @@ p.MsoNormal {
 
 
 /* Links and Menus */
+.byline {
+    font-size: 1.5rem;
+    margin: 0 4rem;
+    max-width: 100%;
+}
 .pager {
     display: -webkit-flex;
     display: flex;
@@ -1035,7 +1037,7 @@ footer .follow {
     padding: 4rem 0 2rem 0;
 }
 .like_page,
-.tweet_page {
+.tweet_pages {
     color: #1E5285;
 }
 .entry-title,
@@ -1046,7 +1048,7 @@ footer .follow {
     margin: 1rem;
 }
 .like_page:hover,
-.tweet_page:hover {
+.tweet_pages:hover {
     color: rgb(20, 160, 233);
 }
 .twitter-follow {
@@ -1206,7 +1208,7 @@ input[type="text"]:focus {
         left: -2rem;
         top: 0;
     }
-    .share-post .tweet_page {
+    .share-post .tweet_pages {
         left: -4rem;
     }
     footer section {
@@ -1230,7 +1232,7 @@ input[type="text"]:focus {
     }
     p,
     .form-group {
-        margin: 3rem auto;
+        margin: 2rem auto !important;
     }
     .contact form {
         margin: 3rem 5rem;
@@ -1253,6 +1255,12 @@ input[type="text"]:focus {
     .banner > .container-fluid {
         height: 350px;
         max-height: 350px;
+    }
+    .byline {
+        margin: 0 8rem !important;
+    }
+    .single article header {
+        margin: 0 4rem 4rem 4rem;
     }
 }
 @media (min-width: 1000px) {

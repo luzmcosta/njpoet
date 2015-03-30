@@ -178,7 +178,7 @@ function get_facebook( $resource ) {
  */
 function get_facebook_user() {
     // Set username.
-    $username = 'njpoet';
+    $username = 'charlesbivona';
 
     // Get user data from Facebook API.
     $user = get_facebook( $username );
@@ -225,7 +225,7 @@ function facebook_url_count( $url ) {
  */
 function get_twitter_user() {
     $resource = "https://api.twitter.com/1.1/users/show.json/";
-    $user_id = "screen_name=njpoet";
+    $user_id = "screen_name=charlesbivona";
 
     // Request the user information.
     $user = file_get_contents( $resource . $user_id );
