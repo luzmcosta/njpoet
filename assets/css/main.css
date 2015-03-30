@@ -152,6 +152,9 @@ p {
             hyphens: auto;
     word-break: keep-all;
 }
+p {
+    margin: 0 0 4rem;
+}
 figure {
     margin: 0 auto;
 }
@@ -320,6 +323,9 @@ nav.collapse {
 }
 .contact {
     margin: 2em 0 3em 0;
+}
+.CleanContact {
+    margin: auto;
 }
 .sharedaddy.sd-sharing-enabled {
     background: rgba(255, 255, 255, 0.9);
@@ -939,22 +945,17 @@ footer section h3 {
 }
 
 footer .jetpack_subscription_widget {
-    background: rgb(0, 0, 0);
-    color: white;
-    float: none;
-    margin: 0 0 2em 0;
-    padding: 2em;
-    max-width: 100%;
-    text-align: center;
-    width: 100%;
+    max-width: 30rem;
 }
 footer .jetpack_subscription_widget h3 {
-    height: 0;
+    color: rgba(255, 255, 255, 1);
     margin: 0;
 }
 footer .jetpack_subscription_widget p {
+    color: rgba(255, 255, 255, 0.4);
     display: inline-block;
-    margin: 0;
+    font-size: small;
+    margin: 1rem 0;
 }
 footer ul {
     margin: auto;
@@ -970,18 +971,33 @@ footer a {
     color: #F0F8FF;
 }
 footer input[type=submit] {
-    border: 3px solid rgb(30, 82, 133);
+    display: none;
+}
+/*
+footer input[type=submit] {
+    border-left: 3px solid rgba(255, 255, 255, 0.4);
+    border-right: 3px solid rgba(255, 255, 255, 0.4);
     border-radius: 0.5rem;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255, 0.4);
     font-size: 2rem;
     height: 4rem;
     margin-top: 1rem;
+
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+footer :-moz-placeholder,
+footer ::-moz-placeholder,
+footer :-ms-placeholder,
+footer *::-webkit-input-placeholder {
+    color: rgb(255, 255, 255, 0.4) !important;
 }
 footer input[type=submit]:hover {
     background: none;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255, 0.8);
     border: 3px solid rgb(30, 82, 133);
 }
+*/
 footer #subscribe-text {
     font-family: Lato, Century Gothic, sans-serif;
     font-size: 2rem;
@@ -994,11 +1010,10 @@ footer #subscribe-email {
 footer #subscribe-field {
     background: none;
     border: none;
-    border-bottom: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.4);
     border-radius: 0.25rem;
     color: white;
     font-size: 2rem;
-    height: 4rem;
     padding: 0 1em;
     text-align: center;
     width: 25ch;
