@@ -925,13 +925,6 @@ footer {
     margin-top: 6rem;
     text-align: center;
 }
-footer .container {
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: row wrap;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-}
 footer section {
     flex-basis: 1;
     flex-grow: 1;
@@ -955,7 +948,7 @@ footer .jetpack_subscription_widget p {
     color: rgba(255, 255, 255, 0.4);
     display: inline-block;
     font-size: small;
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
 }
 footer ul {
     margin: auto;
@@ -1017,6 +1010,9 @@ footer #subscribe-field {
     padding: 0 1em;
     text-align: center;
     width: 25ch;
+}
+input[alt="Donate"] {
+    margin-top: 2rem;
 }
 footer .jetpack_subscription_widget i {
     margin-right: 0.5em;
